@@ -257,10 +257,10 @@ E.G. THERE IS ONLY ONE BOX (CONTAINER) INSTEAD OF TWO. AND ADDED SOME STYLING TO
     font-weight: bold;
     /* margin-top: 12px; */
     padding-top: 5em;
-    /* background-color: rgb(95,222,57); */
-    background-color: white;
-    /* color: #0b06f5; */
-    color: black;
+    background-color: rgb(95,222,57);
+    /* background-color: white; */
+    color: #0b06f5;
+    /* color: black; */
     transform: rotateY(180deg);
     z-index: 1;
   }
