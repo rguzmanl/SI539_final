@@ -668,7 +668,12 @@ footer a i{
     min-height: 10vh;
     /* background-color: #0b06f5; */
     align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 5;
   }
+
+  
 
   .main-nav li{
     display: block;
@@ -808,6 +813,9 @@ footer a i{
 @media only screen and (max-width: 768px) {
   header{
     min-height: 10vh;
+    position: sticky; 
+    top: 0;
+    z-index: 5;
   }
   
   .main-nav{
@@ -944,6 +952,9 @@ footer a i{
   
   header{
     min-height: 10vh;
+    position: sticky; 
+    top: 0;
+    z-index: 5;
   }
   .main-nav{
     margin: 0;
