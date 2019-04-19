@@ -1,0 +1,1092 @@
+/* header and footer bckg color #0b06f5 */
+
+
+header, footer{
+  width: 100%;
+  min-height: 15vh;
+  background-color: #0b06f5;
+  /* background: #fff url("slim_head.png");  */
+}
+
+main{
+  min-height: 68vh;
+
+}
+
+a.skip{
+  color: white;
+  position: relative;
+  top: -40px;
+  transition: top ease-in .5s;
+}
+
+a.skip:focus{
+  background: #0b06f5; 
+  top: 5px;
+}
+
+
+/* Clickable Logo */
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 20vw;
+}
+
+.logo img{
+  display: block;
+  width: 20vw;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+
+.main-nav{
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 16px;
+  margin-bottom: 0;
+  padding: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  /* adding sticky nav */
+  overflow: hidden;
+  
+}
+
+/* The sticky */
+header {
+  /* position: -webkit-sticky; */
+  position: sticky; 
+  top: 0;
+  z-index: 5;
+} 
+
+/* more code for sticky nav this will come from JS */
+/* .sticky {
+  position: fixed;
+  top: 0;
+} */
+
+
+
+/* list elemtns displayed as inline-block = displayed horizontally next to each other */
+.main-nav li{
+  display: inline-block; 
+}
+
+/* style to each <a> */
+.main-nav li a{
+  text-decoration: none;
+  padding: .5em;
+  margin: 2em;
+  color: rgb(255,255,255)
+  
+}
+
+/* Style to each nav item when current */
+.main-nav li a.current{
+  text-decoration: none;
+  text-align: right;
+  font-weight: bold;
+  color: rgb(95,222,57);
+}
+
+/* Style to each nav item when hover over */
+.main-nav li a:hover,a:focus{
+  border-bottom: 1px solid white;
+}
+
+
+
+
+
+.bckgimg{
+  max-width: 100%;
+  height: auto;
+}
+
+
+.about-slmkt{  
+  display: block;
+  padding: 2em;
+  font-size: 16px;
+  line-height: 1.3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  color: rgb(35, 35, 115);
+
+}
+
+.about-slmkt h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  color: rgb(35, 35, 115);
+  font-size: 20px
+}
+
+/* ADDING CALLOUT. 
+PARTS OF THIS CODE WERE TAKEN FROM W3SCHOOLS EXAMPLE BUT I MODIFIED SOME FEATURES.
+E.G. THERE IS ONLY ONE BOX (CONTAINER) INSTEAD OF TWO. AND ADDED SOME STYLING TO MAKE IT MATCH WITH MY PAGE */
+
+.callout {
+  position: fixed;
+  /* last line forces the callout box to stay visible in the lower corner */
+  top: 475px;
+  right: 20px;
+  width: 400px;
+  height: 150px;
+  margin-left: 20px;
+  max-width: 300px;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #0b06f5;
+  border-width: 4px;
+  /* background-color:rgb(95,222,57); */
+  background-color: rgb(95,222,57);
+  
+}
+
+/* .callout p{
+  font-size: 24px;
+  color: #0b06f5;
+  text-align: left;
+} */
+
+/* .callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+} */
+
+.callout-container {
+  padding: 15px;
+  margin-top: 15px;
+  margin-left: 10px;
+  /* background-color: #ccc; */
+  font-size: 24px;
+  color: #0b06f5;
+  align-content: center;
+  align-self: center;
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: white;
+}
+/* THIS MEDIA QUERY IS TO MAKE THE CALLOUT DISAPPEAR ON MOBILE DEVICES */
+@media only screen and (max-width: 1024px){
+  .callout{
+    display: none;
+  }
+}
+
+/* CSS FOR CALL OUT ENDS HERE  */
+
+
+
+.statement{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* align-items: center; */
+  /* justify-items: center; */
+  margin: 3%;
+  height: 68vh;
+}
+
+
+/* CODE FOR FLIPCARD */
+  /* USED CODE FROM HERE: https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
+  
+  .flip-card {
+    padding: 2em;
+    align-self: center;
+    justify-self: center;
+    background-color: transparent;
+    width: 500px;
+    height: 331px;
+    perspective: 1000px;
+  }
+
+  .flip-card img{
+    width: 100%;   
+    /* justify-self: center; */
+    /* align-self: center; */
+  }
+
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    z-index: 2;
+  }
+
+  .flip-card-back {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 5em;
+    background-color: rgb(95,222,57);
+    /* background-color: #0b06f5; */
+    color: #0b06f5;;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+
+  #hide {
+    display: none;
+  }
+  /* FLIP CARD CODE ENDS HERE */
+
+/* stops flip card in responsive */
+@media only screen and (max-width: 1024px){
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(0deg);
+  }
+
+  
+  .flip-card {
+    display: none;
+ }
+
+ #hide {
+   display: inline;
+ }
+
+ .statement{
+   /* display: grid; */
+   grid-template-columns: auto;
+ }
+
+ 
+
+}
+
+
+.objectives{
+  padding: 4%;
+  align-self: center;
+  justify-self: center;
+  line-height: 1.5em;
+  font-family: Helvetica;
+  width: 85%;
+
+}
+
+/* font-family: 'Heebo', sans-serif; */
+/* COME BACK TO THIS CODE LATER TO ADD ACCORDION */
+
+.accordion {
+  
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  margin: 9px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  
+}
+
+
+
+.active, .accordion:hover{
+  
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+/* ACCORDION ENDS HERE */
+
+
+
+
+
+.brand{
+  display: flex;
+  align-items: center;
+  margin: 12%;
+  height: 100vh;
+}
+
+/* .marca{
+  padding: 10%;
+  line-height: 1.5em;
+  font-family: Helvetica;
+  background: black url("../images/athlete.jpg");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+.marca p, h3{
+  width: 45%;
+  color:white;
+  text-shadow: 2px 2px 2px rgb(170, 170, 170);
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+} */
+
+
+
+/* ADDING CODE FOR MODAL BUTTON IN MENU PAGE */
+
+
+#myBtn{
+  display: inline-block;
+  padding: 1.5em;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  border: 12px;
+  max-width: 20%;
+  border-style: solid;
+  border-color: rgb(95,222,57);
+  box-shadow: 5px 10px 18px #0b06f5;
+  background-color: white;
+  border-radius: 50%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: #0b06f5;
+  cursor: pointer;
+    
+}
+
+.modal{
+  display: none;
+  max-width: 20%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: black;
+  
+}
+
+.modal-content img{
+  max-width: 100%;
+} 
+
+    /* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}  
+
+
+
+
+
+
+.title-menu{
+  font-size: 5vh;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  margin: .5em;
+  color: #0b06f5
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+
+.menu img{ 
+  width: 35vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.menu img:first-child{
+  padding-top: 2em;
+}
+
+.menu img:last-child{
+  padding-bottom: 2em;
+}
+
+
+.myModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  /* width: 100%; Full width */
+  /* height: 100%; Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+/* .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+} */
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.market{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* display: flex; */
+  /* align-items: center; */
+  margin: 3%;
+  height: 68vh;
+}
+
+.market img{
+  width: 85%;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.description{
+  /* display: inline; */
+  max-width: 70%; 
+  align-self: center;
+  justify-self: center;
+  padding: 5%;
+  line-height: 1.5em;
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+/* @media only screen and (min-width: 1023px){
+  .market{
+    grid-template-columns: auto;
+  }
+
+  .description{
+    padding: 0;
+    margin: 3px;
+  }
+  
+} */
+
+
+
+/* TRYING CAROUSEL */
+/* .carouselbox {
+  align-self: center; */
+  /* font-family: helvetica,sans-serif;
+  font-size: 14px; */
+  /* width: 90%;
+  position: relative;
+  margin: 1em;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+  overflow: hidden;
+}
+.content {
+  margin: 0;
+  padding: 0;
+}
+.content li {
+  /* font-size: 100px; */
+  /* margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none; */
+  /* text-align: center; */
+/* } */
+
+/* .active {
+  width: 45%;
+  height: 130px;
+}
+.active li {
+  position: absolute;
+  top: 200px;
+}
+.active li.current {
+  top: 30px;
+}
+
+.active .buttons {
+  padding: 5px 0;
+  background: #eee;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.carouselbox button {
+  border: none;
+  display: none;
+}
+.active button {
+  display: block;
+} 
+.offscreen {
+  position: absolute;
+  left: -2000px;
+} */
+/* TRYING CAROUSEL ENDS HERE */
+
+
+
+
+
+
+
+
+
+
+
+.membresia{
+  display: flex;
+  align-items: center;
+  margin: 3%;
+  height: 68vh;
+}
+
+.membresia img{
+  width: 45%;
+}
+
+.membership{
+  padding: 10%;
+  line-height: 1.5em;
+  font-family: Helvetica;
+}
+
+
+
+footer{
+  /* min-height: 20vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p{
+  /* display: block; */
+  font-size: 3.5vh;
+  color: rgb(255,255,255);
+  /* font-family: 'Saira Extra Condensed', sans-serif; */
+  font-family: 'Open Sans Condensed', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  text-align: center;
+  /* padding: .5em; */
+  margin: .5em;
+}
+
+footer a i{
+  color: white;
+  margin: .5em;
+  /* font-size: 2em; */
+}
+  
+
+
+
+/* IPAD PRO SIZE */
+@media only screen and (max-width: 1024px) {
+
+  header{
+    min-height: 10vh;
+    /* background-color: #0b06f5; */
+    align-items: center;
+  }
+
+  .main-nav li{
+    display: block;
+    margin: 0;
+    padding: .25em;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 30vw;
+  }
+  
+  .logo img{
+    width: 30vw;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+
+  
+
+/* RESPONSIVE DESIGN FOR ESTRATEGIA PAGE */
+
+
+.statement{
+  display: inline;
+  
+}
+
+.statement img{
+  width: 75%;  
+  margin-left: 73px;
+  padding: 2em;
+  justify-self: center;
+}
+
+
+
+
+
+
+  .title-menu{
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    margin: .5em;
+    color: #0b06f5
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    
+  }
+  .menu img{
+    width: 25vw;
+    padding: 1em;
+    align-self: center;
+  }
+
+
+  /* MODAL */
+
+  #myBtn{
+    display: inline-block;
+    padding: .5em;
+    margin-left: 20px;
+    border: 7px;
+    max-width: 15%;
+    border-style: solid;
+    border-color: rgb(95,222,57);
+    box-shadow: 5px 10px 18px #0b06f5;
+    background-color: white;
+    border-radius: 50%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+    color: #0b06f5
+      
+  }
+  .modal{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;    
+  }
+
+
+
+
+
+  .market{
+    grid-template-columns: auto;
+  }
+
+  .description{
+    max-width: 70%;
+    padding: 5em;
+    margin: 3px;
+  }
+
+  /* .market{
+    grid-template-columns: auto;
+  }
+  .market img{
+    width: 68%;  
+    padding: 2em;
+    justify-self: center;
+  } */
+
+/* CONTINUE WORKING HERE */
+/* CONTINUE WORKING HERE */
+/* CONTINUE WORKING HERE */
+/* CONTINUE WORKING HERE */
+/* CONTINUE WORKING HERE */
+/* CONTINUE WORKING HERE */
+
+  .membresia{
+    display: grid;
+        
+  }
+  .membresia img{
+    width: 60%;  
+    padding: 2em;
+    justify-self: center;
+    grid-row-start: 2;
+  }
+
+  .membership{
+    padding: 2.5em;
+    grid-row-start: 1;
+  }
+
+
+}
+
+/* IPAD SIZE */
+@media only screen and (max-width: 768px) {
+  header{
+    min-height: 10vh;
+  }
+  
+  .main-nav{
+    margin: 0;
+    text-align: left;
+    padding: 1em;
+  }
+
+  .main-nav li{
+    display: block;
+    margin: 0;
+    padding: .25em;
+    font-size: 12px;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 35vw;
+  }
+  
+  .logo img{
+    display: block;
+    width: 35vw;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .statement{
+    display: inline-grid;
+  }
+  .statement img{
+    width: 75%;  
+    padding: 2em;
+    justify-self: center;
+    margin-right: 70px;
+    grid-row-start: 2;
+  }
+  .objectives{
+    grid-row-start: 1;
+    padding: 1.5em;
+    font-size: 8px;
+  }
+
+  .title-menu{
+    font-size: 26px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    margin: .5em;
+    color: #0b06f5
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    
+  }
+
+
+  #myBtn{
+    display: inline-block;
+    padding: .5em;
+    margin-left: 20px;
+    border: 7px;
+    max-width: 20%;
+    border-style: solid;
+    border-color: rgb(95,222,57);
+    box-shadow: 5px 10px 18px #0b06f5;
+    background-color: white;
+    border-radius: 50%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+    color: #0b06f5
+      
+  }
+  .modal{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;    
+  }
+
+
+  .menu img{
+    width: 25vw;
+    padding: 1em;
+    align-self: center;
+  }
+
+
+
+
+  .market{
+    display: inline-grid;
+  }
+  .market img{
+    width: 60%;  
+    padding: 2em;
+    justify-self: center;
+    grid-row-start: 2;
+  }
+  .description{
+    padding: 2.5em;
+    grid-row-start: 1;
+  }
+
+  .carouselbox {
+    align-self: center;
+    justify-self: center;
+  }
+
+
+
+
+  .membresia{
+    display: grid;
+        
+  }
+  .membresia img{
+    width: 60%;  
+    padding: 2em;
+    justify-self: center;
+    grid-row-start: 1;
+  }
+
+  .membership{
+    padding: 2.5em;
+    grid-row-start: 2;
+  }
+
+}
+
+/* IPHONE X, CHOSE THIS SIZE SO I CAN ADJUST TEXT TO FIT PHONE SCREEN */
+ @media only screen and (max-width: 500px) {
+  
+  header{
+    min-height: 10vh;
+  }
+  .main-nav{
+    margin: 0;
+    text-align: right;
+    padding: 1em;
+  }
+
+  .main-nav li{
+    display: block;
+    margin: 0;
+    padding: .25em;
+    font-size: 10px;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 35vw;
+  }
+  
+  .logo img{
+    display: block;
+    width: 35vw;
+    margin: 0 auto;
+    padding: 0;
+  
+  }
+
+  .about-slmkt{
+    display: inline-block;
+    padding: 1em;
+    font-size: 12px;
+    line-height: 1em;
+  }
+  
+  
+
+/* RESPONSIVE DESIGN FOR ESTRATEGIA PAGE */
+
+main{
+  min-height: 86vh;
+}
+
+
+.statement{
+  display: inline-grid;
+}
+.statement img{
+  width: 65%;  
+  padding: 1em;
+  justify-self: center;
+  grid-row-start: 2;
+}
+
+
+/* RESPONSIVE FOR ESTRATEGIA ENDS HERE */
+
+
+
+
+
+
+  .objectives p{
+    padding: .5em;
+    font-size: 8px;
+    grid-row-start: 1;
+  }
+
+  .title-menu{
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    margin: .5em;
+    color: #0b06f5
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    
+  }
+
+  #myBtn{
+    display: inline-block;
+    padding: .5em;
+    margin-left: 20px;
+    border: 7px;
+    max-width: 20%;
+    border-style: solid;
+    border-color: rgb(95,222,57);
+    box-shadow: 5px 10px 18px #0b06f5;
+    background-color: white;
+    border-radius: 50%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+    color: #0b06f5
+      
+  }
+  .modal{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;    
+  }
+
+
+
+
+  .menu img{
+    width: 25vw;
+    padding: 1em;
+    align-self: center;
+  }
+
+  .market{
+    display: inline-grid;
+  }
+  .market img{
+    width: 80%;  
+    padding: 1em;
+    justify-self: center;
+    grid-row-start: 2;
+  }
+  .description{
+    font-size: 13px;
+    padding: 1em;
+    grid-row-start: 1;
+  }
+
+  .membresia{
+    display: grid;
+        
+  }
+  .membresia img{
+    width: 65%;  
+    padding: 2em;
+    justify-self: center;
+    grid-row-start: 2;
+  }
+
+  .membership{
+    font-size: 10px;
+    padding: 1em;
+    grid-row-start: 1;
+  }
+
+} 
