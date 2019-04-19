@@ -810,12 +810,16 @@ footer a i{
 }
 
 /* IPAD SIZE */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 668px) {
   header{
     min-height: 10vh;
     position: sticky; 
     top: 0;
     z-index: 5;
+  }
+
+  main{
+    min-height: 70vh;
   }
   
   .main-nav{
@@ -948,7 +952,7 @@ footer a i{
 }
 
 /* IPHONE X, CHOSE THIS SIZE SO I CAN ADJUST TEXT TO FIT PHONE SCREEN */
- @media only screen and (max-width: 500px) {
+ @media only screen and (max-width: 400px) {
   
   header{
     min-height: 10vh;
@@ -995,7 +999,7 @@ footer a i{
 /* RESPONSIVE DESIGN FOR ESTRATEGIA PAGE */
 
 main{
-  min-height: 86vh;
+  min-height: 110vh;
 }
 
 
@@ -1003,7 +1007,7 @@ main{
   display: inline-grid;
 }
 .statement img{
-  width: 65%;  
+  width: 85%;  
   padding: 1em;
   justify-self: center;
   grid-row-start: 2;
