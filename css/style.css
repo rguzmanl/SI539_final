@@ -256,7 +256,7 @@ E.G. THERE IS ONLY ONE BOX (CONTAINER) INSTEAD OF TWO. AND ADDED SOME STYLING TO
     font-size: 24px;
     font-weight: bold;
     padding-top: 5em;
-    background-color: rgb(95,222,57);
+    background-color: white;
     /* background-color: #0b06f5; */
     color: #0b06f5;;
     transform: rotateY(180deg);
